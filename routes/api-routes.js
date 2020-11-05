@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const axios = require("axios");
 
 module.exports = (app) => {
     // Using the passport.authenticate middleware with our local strategy.
@@ -10,7 +11,15 @@ module.exports = (app) => {
         // Sending back a password, even a hashed password, isn't a good idea
         res.json({
             email: req.user.email,
+            username: req.body.username,
             id: req.user.id
+        });
+    });
+
+    app.get("/api/search/:title", (req, res) => {
+        const title = req.params.title;
+        axios.get("https://www.googleapis.com/books/v1/volumes?q=" + title).then(results => {
+            res.json(results.data.items);
         });
     });
 
@@ -20,6 +29,7 @@ module.exports = (app) => {
     app.post("/api/signup", (req, res) => {
         db.User.create({
             email: req.body.email,
+            username: req.body.username,
             password: req.body.password
         }).then(() => {
             res.redirect(307, "/api/login");
@@ -44,6 +54,7 @@ module.exports = (app) => {
             // Sending back a password, even a hashed password, isn't a good idea
             res.json({
                 email: req.user.email,
+                username: req.user.username,
                 id: req.user.id
             });
         }
