@@ -5,7 +5,7 @@ CUSTOMER REVIEW
 purpose: allow employers / employees to write reviews about customers (good or bad)
     DISCLAIMER: "This application is for entertainment purposes."
 
-functionality of the app
+HOW TO USE THE APP
 
 Homepage
     -Contains brief description of the app's purpose
@@ -52,7 +52,37 @@ Actions:
     -Comment:
         -Signed in users comment on posted reviews
 
-
 Admin Ability
     -Remove review
-    .
+    
+    
+CREATING THE APP
+
+Contributers
+    -Amanda Neal
+    -Chris Dominy
+    -Jiji Smith
+    -Richard B. Hall
+
+
+Technologies Used
+    -Google Books API
+    -Axios
+    -Bcryptjs
+    -Express
+    -Handlebars
+    -Moment.js
+    -MySQL
+    -Passport
+    -Sequelize
+    
+Challenges
+    -Overcoming Github conflicts and Travis
+    -Launching the App
+    -Incorporating people's different code
+    
+Future Goals
+    -Share reviews with others on other platforms
+    -Possibly add images/videos to reviews
+    -Create an automated preview page of most recent reviews
+    
