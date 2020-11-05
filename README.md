@@ -59,13 +59,16 @@ Admin Ability
 CREATING THE APP
 
 Contributers
+
     -Amanda Neal
     -Chris Dominy
     -Jiji Smith
     -Richard B. Hall
+    
 
 
 Technologies Used
+
     -Google Books API
     -Axios
     -Bcryptjs
@@ -77,11 +80,13 @@ Technologies Used
     -Sequelize
     
 Challenges
+
     -Overcoming Github conflicts and Travis
     -Launching the App
     -Incorporating people's different code
     
 Future Goals
+
     -Share reviews with others on other platforms
     -Possibly add images/videos to reviews
     -Create an automated preview page of most recent reviews
