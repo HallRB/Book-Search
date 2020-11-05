@@ -35,13 +35,8 @@ module.exports = (app) => {
     app.get("/members", isAuthenticated, (req, res) => {
         res.render("members");
     });
-
-    app.get("/create", isAuthenticated, (req, res) => {
-        res.render("create");
-    });
-
  
-    app.get("/search", (req, res) => {
+    app.get("/search", isAuthenticated, (req, res) => {
         res.render("search", {books: []});
     });
 
@@ -59,7 +54,7 @@ module.exports = (app) => {
         });
     });
 
-    app.get("/profile", (req, res) => {
+    app.get("/profile", isAuthenticated, (req, res) => {
         db.Reviews.findAll(
             {
                 where: {
