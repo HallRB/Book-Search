@@ -84,10 +84,12 @@ Challenges
     -Overcoming Github conflicts and Travis
     -Launching the App
     -Incorporating people's different code
+    -Moving HTML and CSS over to Handlebars
     
 Future Goals
 
-    -Share reviews with others on other platforms
-    -Possibly add images/videos to reviews
-    -Create an automated preview page of most recent reviews
+    -Add a delete review function
+    -Allow users to comment on other users’ reviews
+    -Some layout and format updates
+    -Allow to connect with other users through PM or add them to your “queue”
     
